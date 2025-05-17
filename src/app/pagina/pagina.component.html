@@ -1,0 +1,33 @@
+<h1 class="mt-4">Busca Endereço By ViaCep</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"></li>
+</ol>
+
+<form #cepForm="ngForm"> 
+    <div class="row p-0">
+        <div class="mb-3 col-md-12">
+            <label for="cep" class="form-label">Cep</label>
+            <input name="cep" type="text" [(ngModel)]="cep" class="form-control" id="cep" placeholder="Digite o cep">
+            <button class="btn btn-primary" (click)="buscaCep()">buscar</button>
+        </div>
+        <div class="mb-3 col-md-12">
+            <label for="logradouro" class="form-label">Rua</label>
+            <input name="logradouro" [ngModel]="viaCepModel.logradouro" type="text" class="form-control" id="logradouro">
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input name="bairro" [ngModel]="viaCepModel.bairro" type="text" class="form-control" id="bairro" >
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input name="cidade" [ngModel]="viaCepModel.localidade" type="text" class="form-control" id="cidade" >
+        </div>
+        <div class="mb-3 col-md-4">
+            <label for="estado" class="form-label">Estado</label>
+            <input name="estado" [ngModel]="viaCepModel.estado" type="text" class="form-control" id="estado" >
+        </div>
+    </div>
+
+</form>
+
+
